@@ -17,7 +17,17 @@ async def wait_n(n: int, max_delay: int = 10) -> List[float]:
     ''' n: number of call '''
     answ = []
     for value in range(n):
+        flag = 0
         val = await wait_random(max_delay)
-        answ.append(val)
-    answ.sort()
+        if len(answ) == 0:
+            answ.append(val)
+            continue
+        for element in range(len(answ)):
+            if val < answ[element]:
+                answ.insert(element, val)
+                flag = 1
+                break
+        if flag == 0:
+            answ.append(val)
+    # answ.sort()
     return answ
