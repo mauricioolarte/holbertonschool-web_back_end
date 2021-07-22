@@ -13,7 +13,7 @@ from typing import Callable
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-def task_wait_random(max_delay: int) -> Callable[[float], float]:
+def task_wait_random(max_delay):
     ''' import a asyncio task '''
     task = asyncio.ensure_future(wait_random(max_delay))
     return task
