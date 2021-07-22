@@ -6,7 +6,7 @@ import asyncio
 import random
 
 
-async def async_generator() -> Generator[int, None, None]:
+async def async_generator() -> Generator[float, None, None]:
     '''a coroutine called async_generator that takes no arguments'''
     for i in range(10):
         await asyncio.sleep(1)
