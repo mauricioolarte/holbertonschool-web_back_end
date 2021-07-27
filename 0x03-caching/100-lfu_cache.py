@@ -37,18 +37,18 @@ class LFUCache(BaseCaching):
 
         if key not in self.cacheList:
             self.cacheList.insert(0, key)
-        self.mv_right_list(key)
+        self.toRight(key)
 
     def get(self, key):
         """ Gets item from cache """
         item = self.cache_data.get(key, None)
         if item is not None:
             self.counter[key] += 1
-            self.mv_right_list(key)
+            self.toRight(key)
         return item
 
-    def mv_right_list(self, item):
-        """ Moves element to the right, taking into account LFU """
+    def toRight(self, item):
+        """ Moves element  """
         length = len(self.cacheList)
 
         index = self.cacheList.index(item)
@@ -67,5 +67,5 @@ class LFUCache(BaseCaching):
 
     @staticmethod
     def get_first_list(array):
-        """ Get first element of list or None """
+        """ Get first element """
         return array[0] if array else None
