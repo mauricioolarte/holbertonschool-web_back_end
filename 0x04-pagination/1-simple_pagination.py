@@ -22,6 +22,7 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        ''' init '''
         self.__dataset = None
 
     def dataset(self) -> List[List]:
@@ -36,6 +37,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        ''' get pages information '''
         resp = []
         assert isinstance(page, int) is True and isinstance(
             page_size, int) is True, "values must be int"
