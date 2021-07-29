@@ -50,7 +50,7 @@ class Server:
         counter2 = index
         data = []
         while (counter < page_size and index < len(values)):
-            value = values.get(mv, None)
+            value = values.get(counter2, None)
             if value:
                 data.append(value)
                 counter += 1
