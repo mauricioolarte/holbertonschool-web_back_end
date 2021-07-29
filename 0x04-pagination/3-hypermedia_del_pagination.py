@@ -60,7 +60,7 @@ class Server:
         while (counter2 < len(values)):
             value = values.get(counter2, None)
             if value:
-                next_index = mv
+                next_index = counter2
                 break
             counter2 += 1
 
