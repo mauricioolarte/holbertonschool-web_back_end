@@ -45,7 +45,7 @@ class Server:
         max_ranges = len(values)
         min_limit = ranges[0]
         max_range = ranges[1]
-        if ranges[0] > max_ranges or ranges[1] > max_ranges:
+        if ranges[0] > max_ranges:
             return []
 
         for value in range(min_limit, max_range):
