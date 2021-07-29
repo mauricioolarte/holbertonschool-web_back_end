@@ -61,7 +61,7 @@ class Server:
         data_set = self.__dataset
         len_set = len(data_set) if data_set else 0
 
-        total_pages = ceil(len_set / page_size) if data_set else 0
+        total_pages = math.ceil(len_set / page_size) if data_set else 0
 
         if not data:
             page_size = 0
