@@ -42,11 +42,12 @@ class Server:
         assert page > 0 and page_size > 0, "Value must be positive"
         ranges = index_range(page, page_size)
         values = self.dataset()
-        max_range = len(values)
-        if ranges[0] > max_range or ranges[1] > max_range:
-            return []
+        max_ranges = len(values)
         min_limit = ranges[0]
         max_range = ranges[1]
+        if ranges[0] > max_ranges or ranges[1] > max_ranges:
+            return []
+
         for value in range(min_limit, max_range):
             resp.append(values[value])
         return resp
