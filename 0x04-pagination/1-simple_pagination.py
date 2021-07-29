@@ -47,7 +47,6 @@ class Server:
             return []
         min_limit = ranges[0]
         max_range = ranges[1]
-        print(type(min_limit))
         for value in range(min_limit, max_range):
             resp.append(values[value])
         return resp
