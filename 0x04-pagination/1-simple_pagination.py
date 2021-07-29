@@ -37,8 +37,8 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         resp = []
-        assert isinstance(page, int) is True and isinstance(page_size) is True,
-        "values must be int"
+        assert isinstance(page, int) is True and isinstance(
+            page_size, int) is True, "values must be int"
         assert page > 0 and page_size > 0, "Value must be positive"
         ranges = index_range(page, page_size)
         values = self.dataset()
