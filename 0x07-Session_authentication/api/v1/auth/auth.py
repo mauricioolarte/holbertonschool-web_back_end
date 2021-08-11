@@ -47,7 +47,7 @@ class Auth:
         """ Validate user """
         return None
 
-    def session_cookie(self, request=None):
+    def session_cookie(self, request=None) -> str:
         """cookies value to request"""
 
         if request is None:
