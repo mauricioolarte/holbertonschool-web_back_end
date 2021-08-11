@@ -9,7 +9,7 @@ from os import getenv
 
 @app_views.route('/auth_session/login', methods=['POST'], strict_slashes=False)
 def login():
-    """ POST
+    """ POST method
     """
     email = request.form.get('email')
 
@@ -49,7 +49,7 @@ def login():
 @app_views.route('/auth_session/logout',
                  methods=['DELETE'], strict_slashes=False)
 def logout():
-    """ Delete
+    """ Delete Method
     """
     from api.v1.app import auth
 
