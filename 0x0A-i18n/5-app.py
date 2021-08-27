@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Flask app """
+""" parametrize Flask templates to display different languages """
 from flask_babel import Babel, _
 from flask import Flask, render_template, request, g
 from typing import Union
