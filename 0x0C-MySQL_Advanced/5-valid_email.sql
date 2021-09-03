@@ -1,7 +1,7 @@
 -- script that creates a trigger that resets the attribute valid_email only when the email has been changed.
 -- user email validation
 DELIMITER //
-CREATE TRIGGER email_trigger
+CREATE TRIGGER trigger_updateemail
 BEFORE UPDATE ON users
 FOR EACH ROW
 BEGIN
