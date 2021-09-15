@@ -21,4 +21,3 @@ async function asyncUploadUser() {
 }
 
 export default asyncUploadUser;
-
